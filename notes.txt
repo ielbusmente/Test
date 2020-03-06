@@ -1,0 +1,47 @@
+let add = function(num1, num2) {
+    return num1+num2;
+}
+function fun(callback) {
+    let sum = callback(4,5);
+    console.log("sum =  "+ sum);
+}
+fun(add);  
+// add - called a callback function, provided as a paramete to another function
+// fun - higher-order function 
+
+
+event driven architecture
+    events and event emitter 
+    require('events') => returns a class 
+
+
+
+
+// const fs = require('fs')
+
+// let  readStream = fs.createReadStream('notes.txt', 'utf8') //utf8 character encoding scheme 
+// let writeStream = fs.createWriteStream('notesDup.txt')//, 'utf8')
+
+
+// readStream.pipe(writeStream) 
+
+
+// const EventEmitter = require('events')
+// const emitter = new EventEmitter()
+
+// emitter.on('hi', 
+// // function() { 
+// //     console.log('good')
+// // }) 
+// () => console.log('good'))
+
+// emitter.emit('hi')
+const fs = require('fs')
+
+let  readStream = fs.createReadStream('notes.txt', 'utf8') //utf8
+
+readStream.on('data', (chunk) => {
+    console.log('faksdlfnioadhfaiwlfnadsjklfndajnk')
+    console.log(chunk)
+})
+
